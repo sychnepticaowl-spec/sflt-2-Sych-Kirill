@@ -49,7 +49,7 @@ Request 5: Server 1 Port 8888
 Request 6: Server 2 Port 9999
 ```
 
-![Round-robin L4](screenshots/task1-roundrobin.txt)
+![Round-robin L4](screenshots/task1-roundrobin.png)
 
 ---
 
@@ -112,12 +112,15 @@ curl -s -o /dev/null -w "HTTP status: %{http_code}\n" http://127.0.0.1:8088/inde
 # HTTP status: 403
 ```
 
-![Weighted RR L7](screenshots/task2-weighted.txt)
+![Weighted RR L7 с example.local](screenshots/task2-weighted.png)
+
+![403 без example.local](screenshots/task2-weighted-403.png)
 
 ### Статистика HAProxy
 
-Страница stats: http://127.0.0.1:19888/stats  
-Сохранённый HTML: [screenshots/haproxy-stats.html](screenshots/haproxy-stats.html)
+Страница stats: http://127.0.0.1:19888/stats
+
+![Статистика HAProxy](screenshots/stats-HAProxy.png)
 
 ---
 
