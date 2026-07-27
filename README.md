@@ -123,19 +123,3 @@ curl -s -o /dev/null -w "HTTP status: %{http_code}\n" http://127.0.0.1:8088/inde
 ![Статистика HAProxy](screenshots/stats-HAProxy.png)
 
 ---
-
-## Структура проекта
-
-```
-sflt-2-hw/
-├── config/haproxy.cfg      # конфигурация HAProxy
-├── servers/                # директории Python-серверов
-├── screenshots/            # результаты проверок
-├── start.sh                # запуск/остановка всех сервисов
-└── install-haproxy.sh      # установка HAProxy без sudo
-```
-
-## Примечание
-
-HAProxy установлен локально в `bin/` (без `sudo apt install`), так как на VM нет пароля для sudo.  
-Для production-окружения достаточно: `sudo apt install haproxy` и скопировать `config/haproxy.cfg` в `/etc/haproxy/haproxy.cfg`.
