@@ -1,0 +1,7 @@
+=== Задание 1: L4 Round-robin (HAProxy :1325) ===
+Request 1: Server 1 Port 8888
+Request 2: Server 2 Port 9999
+Request 3: Server 1 Port 8888
+Request 4: Server 2 Port 9999
+Request 5: Server 1 Port 8888
+Request 6: Server 2 Port 9999
