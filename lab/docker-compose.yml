@@ -1,0 +1,14 @@
+# Metasploitable 2 в Docker (изолированная лаборатория)
+# Запуск: docker compose -f lab/docker-compose.yml up -d
+# Цель для nmap с хоста: 127.0.0.1 (режим network_mode: host)
+#
+# Внимание: intentionally vulnerable — не публикуйте порты наружу интернета.
+
+services:
+  metasploitable2:
+    image: q8dusty/metasploitable2:latest
+    container_name: metasploitable2
+    network_mode: host
+    privileged: true
+    restart: unless-stopped
+    command: ["sh", "-c", "/bin/services.sh && exec tail -f /dev/null"]
